@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_order_form_delivery_instructions" model="ir.ui.view">
+            <field name="name">view_order_form.delivery_instructions</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Other Information']/group/group[last()]" position="after">
+                    <group name="delivery_instructions" groups="base.group_user">
+                        <field name="instruction_1" />
+                        <field name="instruction_2" />
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
